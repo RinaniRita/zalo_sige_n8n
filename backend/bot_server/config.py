@@ -18,5 +18,9 @@ N8N_WEBHOOK_URL  = os.getenv("N8N_WEBHOOK_URL")
 # OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+# Telegram Configurations
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID")
+
 # Vector store path (relative to project root)
 VECTOR_STORE_PATH = str(Path(__file__).parent.parent.parent / "data" / "vector_store")

@@ -9,19 +9,25 @@ from backend.bot_server.services.llm_service import generate_rag_response, extra
 
 app = FastAPI(title="Zalo Bot Server", version="2.0")
 
-def send_zalo_message(user_id: str, text: str):
+def send_zalo_message(user_id: str, text: str, buttons: list = None):
     """
     Sends a message to a Zalo user via Zalo OA OpenAPI.
+    Supports Zalo Action Buttons (Template payload)
     """
     if not ZALO_OA_ACCESS_TOKEN:
         print("Missing ZALO_OA_ACCESS_TOKEN")
         return
+        
+    if text:
+        text = text.replace("**", "")
+
         
     url = "https://openapi.zalo.me/v3.0/oa/message/cs"
     headers = {
         "access_token": ZALO_OA_ACCESS_TOKEN,
         "Content-Type": "application/json"
     }
+    
     payload = {
         "recipient": {
             "user_id": user_id
@@ -30,6 +36,27 @@ def send_zalo_message(user_id: str, text: str):
             "text": text
         }
     }
+    
+    # Transform generic buttons into Zalo-specific format
+    if buttons:
+        zalo_buttons = []
+        for btn in buttons:
+            zalo_buttons.append({
+                "title": btn.get("text", "Chi tiết"),
+                "type": "oa.query.show",
+                "payload": btn.get("callback", "callback")
+            })
+            
+        payload["message"] = {
+            "text": text,
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "button",
+                    "buttons": zalo_buttons
+                }
+            }
+        }
     
     try:
         res = requests.post(url, headers=headers, json=payload)
@@ -51,25 +78,75 @@ def push_to_n8n(data: dict):
     except Exception as e:
         print(f"Failed to push to n8n: {e}")
 
+def send_telegram_notification(data: dict):
+    """
+    Sends a message to the configured Telegram chat IDs when a lead is captured.
+    """
+    from backend.bot_server.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        print("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID")
+        return
+        
+    chat_ids = [cid.strip() for cid in TELEGRAM_CHAT_ID.split(",") if cid.strip()]
+    
+    phone = data.get('phone')
+    clean_phone = "".join(filter(str.isdigit, phone))
+    phone_link = f'<a href="tel:{clean_phone}">{phone}</a>'
+    
+    # Format a professional notification message
+    message = (
+        "🌟 <b>THÔNG BÁO LEAD MỚI TỪ ZALO BOT</b> 🌟\n\n"
+        f"📞 Số điện thoại: {phone_link}\n"
+    )
+    
+    for chat_id in chat_ids:
+        try:
+            url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+            payload = {
+                "chat_id": chat_id,
+                "text": message,
+                "parse_mode": "HTML"
+            }
+            res = requests.post(url, json=payload)
+            print(f"[Telegram Notification] Sent to {chat_id}: status {res.status_code}")
+        except Exception as e:
+            print(f"Failed to send Telegram message to {chat_id}: {e}")
+
 def process_zalo_message(user_id: str, message: str):
     print(f"[Webhook] Nhận tin nhắn từ {user_id}: {message}")
     
-    # 1. Trích xuất thông tin Lead trong nền (Tên, SĐT, Email, Note)
-    lead_info = extract_lead_info(message)
-    lead_info["zalo_user_id"] = user_id
-    lead_info["raw_message"] = message
+    # 1. HOT LEAD RADAR: Detect 10-digit Vietnamese phone numbers using regex
+    import re
+    cleaned_message = message.replace(".", "").replace(" ", "").replace("-", "")
+    phone_match = re.search(r'(0[3|5|7|8|9][0-9]{8})', cleaned_message)
     
-    # Nếu lấy được SĐT hoặc Email, push về n8n
-    if lead_info.get("phone") or lead_info.get("email"):
-        print(f"[Lead] Phat hien Lead moi: {lead_info}")
+    if phone_match:
+        hot_phone = phone_match.group(1)
+        print(f"🎯 HOT LEAD DETECTED from user {user_id}: {hot_phone}")
+        
+        lead_info = {
+            "phone": hot_phone
+        }
+        
+        # Phat hien Lead moi -> Push to n8n & Telegram
         push_to_n8n(lead_info)
+        send_telegram_notification(lead_info)
+        
+        # Phản hồi lịch sự ngay lập tức cho khách và dừng luồng xử lý (không gọi AI trả lời bừa bãi)
+        thank_you_msg = (
+            "Dạ, Viện SIGE xin chân thành cảm ơn anh/chị đã để lại thông tin liên hệ! 🌟\n\n"
+            "Chúng tôi đã ghi nhận số điện thoại tư vấn của anh/chị. Trưởng phòng Tuyển sinh của Viện sẽ liên hệ trực tiếp cho mình trong thời gian sớm nhất để hỗ trợ kiểm tra hồ sơ và giữ suất học bổng ưu đãi tốt nhất nhé!\n\n"
+            "Chúc anh/chị một ngày tốt lành! 😊"
+        )
+        send_zalo_message(user_id, thank_you_msg)
+        return
 
     # 2. Hybrid Routing (Scripted vs RAG)
-    scripted_text = get_scripted_response(message)
+    scripted_res = get_scripted_response(message)
     
-    if scripted_text:
+    if scripted_res:
         print("[Scripted] Su dung kich ban co san (Scripted)")
-        send_zalo_message(user_id, scripted_text)
+        send_zalo_message(user_id, scripted_res.get("text", ""), scripted_res.get("buttons"))
     else:
         print("[RAG] Su dung AI RAG de tra loi")
         # RAG Logic

@@ -15,7 +15,7 @@ SCRIPTED_ANSWERS = {
     },
 
     "case_2_chi_phi": {
-        "text": """Chào bạn, gói dịch vụ du học bên SIGE trọn gói chỉ từ 36 cho đến 55 triệu với các hệ miễn 100% học phí hoặc thực tập có lương.\n\nBạn vui lòng bấm nút bên dưới để cán bộ tuyển sinh định hướng lộ trình phù hợp với tài chính gia đình nhé👇""",
+        "text": """Chào bạn, SIGE cung cấp các gói dịch vụ tư vấn du học trọn gói với chi phí tối ưu, kết hợp cùng các hệ miễn 100% học phí năm đầu hoặc thực tập có lương để giảm gánh nặng tài chính.\n\nBạn vui lòng bấm nút bên dưới để cán bộ tuyển sinh định hướng lộ trình phù hợp với tài chính gia đình nhé👇""",
         "buttons": MAIN_2_BUTTONS
     },
 
@@ -25,13 +25,29 @@ SCRIPTED_ANSWERS = {
     },
 
     "case_4_like_tuong_tac": {
-        "text": (
-            "Để cán bộ tuyển sinh SIGE hỗ trợ cho bạn tốt nhất, vui lòng để lại số điện thoại."
-        )
+        "text": """🏫 VIỆN SIGE - ĐỒNG HÀNH DU HỌC ĐÀI LOAN 🇹🇼
+
+Viện Khoa học Giáo dục Toàn Cầu (Viện SIGE) là đơn vị tiên phong xây dựng & hoàn thiện hệ sinh thái giáo dục toàn diện Việt Nam - Đài Loan. Chúng tôi tự hào là cầu nối chiến lược hỗ trợ học sinh, sinh viên tiếp cận các chương trình chất lượng với chi phí tối ưu nhất!
+
+✨ SỨ MỆNH & TẦM NHÌN
+💎 Hệ sinh thái khép kín: Đào tạo ngoại ngữ, thực tập doanh nghiệp và cam kết việc làm đầu ra.
+💎 Hỗ trợ toàn diện: Thiết kế lộ trình học & học bổng tối ưu nhất cho từng học viên.
+💎 Bảo trợ tại Đài Loan: Đơn vị DUY NHẤT có văn phòng đại diện tại Đài Bắc, Đào Viên và Cao Hùng để hỗ trợ bạn ngay khi nhập cảnh.
+
+🎯 DỊCH VỤ MŨI NHỌN
+✅ Hỗ trợ chọn trường & thiết kế học bổng riêng biệt.
+✅ Xử lý thủ tục Visa, bảo hiểm và nhập cảnh nhanh chóng.
+✅ Đăng ký thực tập hưởng lương ngay từ năm nhất.
+✅ Bảo chứng 100% cơ hội việc làm sau khi tốt nghiệp.
+
+Để được tư vấn chi tiết, bạn vui lòng để lại số điện thoại 📞 hoặc đăng ký tư vấn miễn phí bên dưới nhé!""",
+        "buttons": MAIN_2_BUTTONS
     },
 
     "nudge_proactive_follow_up": {
-        "text": """Bạn ơi, không biết thông tin trên đã giúp ích được cho mình chưa? ✨\n\nĐể tiết kiệm thời gian, cán bộ tuyển sinh SIGE có thể gọi điện giải đáp 1-1 cho bạn trong 15 phút tới không? Chỉ cần để lại SĐT thôi ạ! 🎯""",
+        "text": """Bạn ơi, không biết thông tin trên đã giúp ích được cho mình chưa? ✨
+ 
+ Để tiết kiệm thời gian, cán bộ tuyển sinh SIGE có thể gọi điện giải đáp 1-1 cho bạn trong 15 phút tới không? Chỉ cần để lại SĐT thôi ạ! 🎯""",
         "buttons": [
             {"text": "📞 Gửi SĐT ngay", "callback": "start_lead_form"},
             {"text": "🏠 Xem Menu chính", "callback": "GET_STARTED"}
@@ -78,8 +94,15 @@ SCRIPTED_ANSWERS = {
         ]
     },
 
+    # (Original scripted answers follow, but with our 3 main buttons if appropriate)
     "danh_sach_truong": {
-        "text": """🏫 **DANH SÁCH CÁC TRƯỜNG ĐẠI HỌC LIÊN KẾT CHIẾN LƯỢC (Kỳ 9/2026)**\n\nDạ, SIGE tự hào là đối tác tuyển sinh trực tiếp của các trường Top đầu Đài Loan như: ĐH Minh Truyền, ĐH Lĩnh Đông, ĐH Đài Cương...\n\nTùy vào tính cách và nguyện vọng (Thích ở phố lớn, hay thích ở gần nhà máy để đi làm thêm), cán bộ tuyển sinh sẽ chọn trường phù hợp nhất.\n\n📞 Nhắn cho SIGE xin SỐ ĐIỆN THOẠI của anh/chị, cán bộ tuyển sinh sẽ gọi điện định hướng trực tiếp để không chọn sai trường nhé!""",
+        "text": """🏫 DANH SÁCH CÁC TRƯỜNG ĐẠI HỌC LIÊN KẾT CHIẾN LƯỢC
+
+Dạ, SIGE tự hào là đối tác tuyển sinh trực tiếp của các trường Top đầu Đài Loan như: ĐH Quốc tế Minh Truyền (MCU), ĐH Quốc lập Ky Nam (NCNU), ĐH Công nghệ Trung Tín (CTBC), ĐH KHKT Lĩnh Đông (LTU)...
+
+Tùy vào năng lực học tập và nguyện vọng, cán bộ tuyển sinh sẽ chọn trường phù hợp nhất.
+ 
+ 📞 Nhắn cho SIGE xin [SỐ ĐIỆN THOẠI] của anh/chị, cán bộ tuyển sinh sẽ gọi điện định hướng trực tiếp để không chọn sai trường nhé!""",
         "buttons": [
             {"text": "✍️ Tư vấn chọn trường", "callback": "start_lead_form"},
             {"text": "📞 Gặp cán bộ tuyển sinh", "callback": "show_contact"}
@@ -87,7 +110,16 @@ SCRIPTED_ANSWERS = {
     },
 
     "hoc_bong_14": {
-        "text": """🎯 **CHƯƠNG TRÌNH HỆ CHUYÊN BAN QUỐC TẾ 1+4 (DỰ BỊ ĐẠI HỌC)**\n\nHệ Dự bị 1+4 đang là chương trình HOT nhất tại SIGE lúc này!\n\n✅ Ưu điểm lớn nhất: Không yêu cầu biết tiếng Trung từ trước. Năm nhất được Chính phủ Đài Loan hỗ trợ 50% - 100% học phí.\n✅ Cam kết: Sang đến nơi, Giám đốc SIGE ở Đài Loan sẽ trực tiếp hỗ trợ các em vào KTX và làm thẻ cư trú.\n\n⚠️ Lưu ý: Hệ 1+4 chốt hồ sơ rất sớm và chỉ nhận các bạn có điểm cấp 3 từ 6.0 trở lên.\n\n📞 Anh/chị vui lòng để lại SỐ ĐIỆN THOẠI, Trưởng phòng Tuyển sinh sẽ gọi check điểm hồ sơ và giữ suất ưu đãi 100% học phí cho mình ngay nhé!""",
+        "text": """🎯 CHƯƠNG TRÌNH HỆ CHUYÊN BAN QUỐC TẾ 1+4 (DỰ BỊ ĐẠI HỌC)
+
+Hệ Dự bị 1+4 đang là chương trình HOT nhất tại SIGE lúc này!
+
+✅ Ưu điểm lớn nhất: Không yêu cầu chứng chỉ ngoại ngữ từ trước. Năm nhất được miễn 100% học phí.
+✅ Cam kết: Có mạng lưới văn phòng hỗ trợ ngay khi nhập cảnh (Đài Bắc, Đào Viên, Cao Hùng).
+
+⚠️ Lưu ý: Hệ 1+4 chốt hồ sơ rất sớm và yêu cầu điểm GPA mỗi học kỳ từ 7.0 trở lên.
+
+📞 Anh/chị vui lòng để lại [SỐ ĐIỆN THOẠI], Trưởng phòng Tuyển sinh sẽ gọi check điểm hồ sơ và giữ suất ưu đãi 100% học phí cho mình ngay nhé!""",
         "buttons": [
             {"text": "📥 Giữ suất ưu đãi 100%", "callback": "start_lead_form"},
             {"text": "🏫 Xem danh sách trường", "callback": "ask_danh_sach_truong"}
@@ -95,7 +127,16 @@ SCRIPTED_ANSWERS = {
     },
 
     "he_vhvl_detail": {
-        "text": """💆 **HỆ VỪA HỌC VỪA LÀM (VHVL) - CƠ HỘI TỰ CHỦ TÀI CHÍNH**\n\nChương trình Vừa học Vừa làm cực kỳ phù hợp để tự chủ tài chính!\n\n✅ Đi làm thêm có lương ngay tháng đầu tiên (Lương từ 18 - 25 triệu/tháng).\n✅ Trường Đại học Lĩnh Đông đang cấp 20 suất Học bổng 100% học phí độc quyền qua SIGE.\n\n🎁 SIGE đang tặng 05 suất [Miễn phí lớp học tiếng/ Tặng vali] cho hồ sơ đăng ký tuần này.\n\n📞 Chỉ còn đúng 3 suất nhận ưu đãi, anh/chị gõ SỐ ĐIỆN THOẠI để cán bộ tuyển sinh SIGE gọi điện tư vấn lộ trình và cách nhận lương thực tập sớm nhất nhé!""",
+        "text": """💆 HỆ VỪA HỌC VỪA LÀM (VHVL) - CƠ HỘI TỰ CHỦ TÀI CHÍNH
+
+Chương trình Vừa học Vừa làm cực kỳ phù hợp để tự chủ tài chính!
+
+✅ Đi làm thêm có lương ngay trong quá trình học (Thu nhập thực tập hỗ trợ lên đến 22 - 28 triệu VNĐ/tháng).
+✅ Hỗ trợ chuyển đổi từ visa sinh viên sang visa kỹ sư để ở lại làm việc dài hạn.
+
+🎁 SIGE đang tặng 05 suất [Miễn phí lớp học tiếng/ Tặng vali] cho hồ sơ đăng ký tuần này.
+ 
+ 📞 Chỉ còn đúng 3 suất nhận ưu đãi, anh/chị gõ [SỐ ĐIỆN THOẠI] để cán bộ tuyển sinh SIGE gọi điện tư vấn lộ trình và cách nhận lương thực tập sớm nhất nhé!""",
         "buttons": [
             {"text": "✅ Đăng ký nhận quà 🎁", "callback": "start_lead_form"},
             {"text": "🏫 Các hệ khác", "callback": "show_program_menu"}
@@ -117,7 +158,23 @@ SCRIPTED_ANSWERS = {
     },
 
     "tai_chinh_goi_dich_vu": {
-        "text": """💰 **CÁC GÓI DỊCH VỤ DỊCH VỤ TƯ VẤN TRỌN GÓI TẠI SIGE**\n\nViện SIGE cung cấp các gói dịch vụ minh bạch, cam kết không phát sinh ẩn phí trong quá trình xử lý:\n\n1️⃣ **Gói Dịch vụ Cơ bản (36.000.000 VNĐ):**\n- Xử lý hồ sơ báo danh 2 nguyện vọng.\n- Dịch thuật, công chứng, hợp thức hóa hồ sơ.\n- Luyện phỏng vấn trường và phỏng vấn Visa.\n- Khám sức khỏe tại Việt Nam & Lệ phí Visa lần 1.\n\n2️⃣ **Gói Dịch vụ VIP (55.000.000 VNĐ):**\n- Bao gồm toàn bộ danh mục trọn gói của Gói Cơ bản.\n- **Tặng thêm:** Gói đào tạo tiếng Trung online/offline đạt trình độ A1-A2.\n- **Tặng thêm:** Vé máy bay 1 chiều sang Đài Loan.\n- **Hỗ trợ tại Đài Loan:** Thẻ lưu trú, thẻ lao động, bảo hiểm 6 tháng đầu, trọn bộ tư trang (chăn, ga, gối).\n\n3️⃣ **Gói Du học bằng Tiếng Anh (70.000.000 VNĐ):**\n- Bao gồm toàn bộ danh mục của Gói VIP.\n- **Đặc biệt:** Đào tạo tiếng Anh IELTS cam kết đầu ra 5.0.\n\n👇 *Vui lòng để lại Số điện thoại để chuyên viên tư vấn hỗ trợ chi tiết hơn về các gói này nhé!*""",
+        "text": """💰 CÁC GÓI DỊCH VỤ DỊCH VỤ TƯ VẤN TRỌN GÓI TẠI SIGE
+
+Viện SIGE cung cấp các gói dịch vụ minh bạch, cam kết không phát sinh ẩn phí trong quá trình xử lý:
+
+1️⃣ **Hỗ trợ toàn diện từ A-Z:**
+- Định hướng chọn trường, chọn ngành phù hợp.
+- Hỗ trợ dịch thuật, công chứng, hợp thức hóa hồ sơ.
+- Luyện phỏng vấn xin Visa chuyên sâu.
+
+2️⃣ **Bảo trợ sinh viên tại Đài Loan:**
+- Đón sân bay, hỗ trợ làm thẻ cư trú, thẻ lao động.
+- Liên kết doanh nghiệp tài trợ học bổng và cam kết việc làm đầu ra.
+
+3️⃣ **Hỗ trợ định cư:**
+- Hỗ trợ chuyển đổi Visa sinh viên sang Visa kỹ sư.
+
+👇 *Nhấn nút bên dưới để nhận bảng ước tính tổng tài chính cần chuẩn bị khi sang Đài Loan!*""",
         "buttons": [
             {"text": "📊 Bảng phí chi tiết", "callback": "ask_tai_chinh_tong_quan"},
             {"text": "📞 Tư vấn gói phù hợp", "callback": "start_lead_form"}
@@ -125,7 +182,13 @@ SCRIPTED_ANSWERS = {
     },
 
     "tai_chinh_tong_quan": {
-        "text": """📊 **VẤN ĐỀ TÀI CHÍNH KHI DU HỌC ĐÀI LOAN**\n\nDạ, vấn đề tài chính phụ thuộc vào hồ sơ của mình có đạt học bổng hay không.\n\nChi phí đi qua SIGE là Trọn gói & Minh bạch 100%. Nếu học bạ đẹp, SIGE sẽ xin được suất miễn 100% học phí, lúc đó chi phí ban đầu cực kỳ thấp.\n\nĐể có bảng dự toán chính xác đến từng đồng (Không phát sinh), anh/chị vui lòng để lại SỐ ĐIỆN THOẠI. Cán bộ tuyển sinh sẽ gọi hỏi điểm cấp 3 và báo giá luôn ạ!""",
+        "text": """📊 VẤN ĐỀ TÀI CHÍNH KHI DU HỌC ĐÀI LOAN
+
+Dạ, vấn đề tài chính phụ thuộc vào hồ sơ của mình có đạt học bổng hay không.
+
+Chi phí đi qua SIGE là Trọn gói & Minh bạch 100%. Nếu học bạ đẹp, SIGE sẽ xin được suất miễn 100% học phí, lúc đó chi phí ban đầu cực kỳ thấp.
+ 
+ Để có bảng dự toán chính xác đến từng đồng (Không phát sinh), anh/chị vui lòng để lại [SỐ ĐIỆN THOẠI]. Cán bộ tuyển sinh sẽ gọi hỏi điểm cấp 3 và báo giá luôn ạ!""",
         "buttons": [
             {"text": "💰 Nhận bảng dự toán", "callback": "start_lead_form"},
             {"text": "💼 Tìm học bổng giảm phí", "callback": "ask_hoc_bong_chung"}
@@ -133,21 +196,53 @@ SCRIPTED_ANSWERS = {
     },
 
     "ho_so_chuan_bi": {
-        "text": """📂 **DANH MỤC HỒ SƠ CẦN CHUẨN BỊ (7 BƯỚC CHUYÊN NGHIỆP)**\n\nĐể kịp kỳ bay tháng 9/2026, bạn nên chuẩn bị sớm các giấy tờ sau:\n\n1️⃣ **Hồ sơ Học thuật:** Bằng tốt nghiệp THPT (hoặc bằng CĐ/ĐH) và Học bạ/Bảng điểm gốc.\n2️⃣ **Hồ sơ Cá nhân:** Hộ chiếu, CCCD, Giấy khai sinh bản sao mẫu mới nhất.\n3️⃣ **Lý lịch tư pháp:** Bản số 2 (do Sở Tư pháp cấp).\n4️⃣ **Sức khỏe:** Khám sức khỏe tổng quát theo mẫu du học tại các bệnh viện chỉ định.\n5️⃣ **Tài chính:** Sổ tiết kiệm gốc (từ 150 - 180 triệu VNĐ) mang tên SV hoặc Bố/Mẹ.\n6️⃣ **Chứng chỉ ngoại ngữ:** Bản gốc chứng chỉ TOCFL hoặc IELTS tương ứng với hệ du học.\n\n👉 *Viện SIGE sẽ hỗ trợ bạn scan, dịch thuật, công chứng và nộp hồ sơ xin giấy phép từ các cơ quan ban ngành tại Đài Loan.*""",
+        "text": """📂 DANH MỤC HỒ SƠ CẦN CHUẨN BỊ (7 BƯỚC CHUYÊN NGHIỆP)
+
+Để kịp kỳ bay tháng 9/2026, bạn nên chuẩn bị sớm các giấy tờ sau:
+
+1️⃣ **Hồ sơ Học thuật:** Bằng và Học bạ/Bảng điểm gốc THPT (hoặc CĐ/ĐH).
+2️⃣ **Hồ sơ Cá nhân:** Hộ chiếu, CCCD (photo), Giấy khai sinh bản sao mẫu mới nhất, 05 ảnh thẻ.
+3️⃣ **Lý lịch tư pháp:** Phiếu lý lịch tư pháp số 2.
+4️⃣ **Sức khỏe:** Khám sức khỏe và phiếu tiêm chủng tại bệnh viện chỉ định.
+5️⃣ **Tài chính:** Sổ tiết kiệm từ 120 - 200 triệu VNĐ.
+6️⃣ **Chứng chỉ ngoại ngữ:** Bản gốc chứng chỉ TOCFL hoặc IELTS (tùy hệ du học).
+
+👉 *Viện SIGE sẽ hỗ trợ bạn scan, dịch thuật, công chứng và nộp hồ sơ xin giấy phép từ các cơ quan ban ngành tại Đài Loan.*""",
         "buttons": [
             {"text": "🚀 Bắt đầu làm hồ sơ", "callback": "ask_quy_trinh_chi_tiet"}
         ]
     },
 
     "quy_trinh_chi_tiet": {
-        "text": """🚀 **QUY TRÌNH HỒ SƠ CHUẨN TẠI VIỆN SIGE (7 BƯỚC)**\n\nBạn sẽ được cán bộ chuyên trách của Viện hỗ trợ từng bước một:\n\n1. **Bước 1 (Ghi danh):** Ký hợp đồng tư vấn, nộp tiền cọc (10-20M) và điền form online.\n2. **Bước 2 (Nộp hồ sơ):** SV nộp 5 mục hồ sơ cơ bản (Bằng, học bạ, hộ chiếu...).\n3. **Bước 3 (Luyện phỏng vấn):** SV viết tự truyện, kế hoạch học tập và phỏng vấn với trường bên Đài Loan.\n4. **Bước 4 (Nộp Visa):** Sau khi có thông báo đỗ trường, SV đi khám sức khỏe và chuẩn bị sổ tiết kiệm gốc để nộp Visa.\n5. **Bước 5 (Phỏng vấn Visa):** Tùy hệ du học, SV có thể phải phỏng vấn trực tiếp tại Văn phòng Kinh tế & Văn hóa Đài Bắc (VPDB).\n6. **Bước 6 (Tập kết & Bay):** Sau khi có Visa, Viện xuất vé máy bay và hướng dẫn SV tập kết tại sân bay Nội Bài/Tân Sơn Nhất.\n7. **Bước 7 (Hạ cánh):** Trường đón SV tại sân bay Đài Loan, đưa về KTX và hỗ trợ làm thẻ cư trú.\n\n👉 *Toàn bộ quy trình thường kéo dài từ 3-4 tháng. Hãy bắt đầu ngay hôm nay!*""",
+        "text": """🚀 QUY TRÌNH HỒ SƠ CHUẨN TẠI VIỆN SIGE (7 BƯỚC)
+
+Bạn sẽ được cán bộ chuyên trách của Viện hỗ trợ từng bước một:
+
+1. **Nộp hồ sơ:** Gửi hồ sơ về phòng tuyển sinh SIGE hoặc điền form trực tuyến.
+2. **Phỏng vấn:** Tham gia phỏng vấn với trường và doanh nghiệp (nếu có).
+3. **Đặt cọc:** Hoàn thành thủ tục đặt cọc và phí hành chính.
+4. **Nhận thông báo:** Nhận giấy báo nhập học chính thức từ trường bên Đài Loan.
+5. **Xin Visa:** SIGE hỗ trợ làm thủ tục xin visa tại Văn phòng Kinh tế và Văn hóa Đài Bắc.
+6. **Nhập học:** Xuất cảnh và nhập học theo thông báo, được đón tại sân bay và hỗ trợ nơi ở.
+
+👉 *Toàn bộ quy trình thường kéo dài từ 3-4 tháng. Hãy bắt đầu ngay hôm nay!*""",
         "buttons": [
             {"text": "✍️ Đăng ký tư vấn lộ trình", "callback": "start_lead_form"}
         ]
     },
 
     "hoc_bong_chung": {
-        "text": """💰 **CHÍNH SÁCH HỌC BỔNG & HỖ TRỢ TÀI CHÍNH TẠI SIGE**\n\nSIGE cam kết giúp sinh viên tối ưu hóa chi phí thông qua quỹ học bổng doanh nghiệp và chính sách của nhà trường:\n\n- **Học bổng 100%:** Dành cho sinh viên ưu tú hệ VHVL hoặc các trường như Đài Cương, John...\n- **Học bổng Chính phủ (Hệ 1+4):** Miễn phí năm đầu tiên cho hầu hết sinh viên.\n- **Gói Hỗ trợ SIGE:** Giảm phí dịch vụ cho SV có thành tích xuất sắc hoặc hoàn cảnh khó khăn.\n\n⚠️ **Lưu ý:** Ngay khi sang Đài Loan, sinh viên vẫn nên chuẩn bị một khoản tiền nhỏ (~40M) để đóng các tạp phí ban đầu, sau đó nhà trường sẽ xét duyệt hồ sơ và hoàn lại tiền học bổng theo quy định.\n\n👇 *Để biết chính xác mức Học bổng bạn có thể đạt được dựa trên Điểm trung bình hiện tại, hãy để lại Số điện thoại nhé!*""",
+        "text": """💰 CHÍNH SÁCH HỌC BỔNG & HỖ TRỢ TÀI CHÍNH TẠI SIGE
+
+SIGE cam kết giúp sinh viên tối ưu hóa chi phí thông qua quỹ học bổng doanh nghiệp và chính sách của nhà trường:
+
+- **Học bổng 100%:** Dành cho sinh viên ưu tú hệ VHVL hoặc các trường như Đài Cương, John...
+- **Học bổng Chính phủ (Hệ 1+4):** Miễn phí năm đầu tiên cho hầu hết sinh viên.
+- **Gói Hỗ trợ SIGE:** Giảm phí dịch vụ cho SV có thành tích xuất sắc hoặc hoàn cảnh khó khăn.
+
+⚠️ **Lưu ý:** Ngay khi sang Đài Loan, sinh viên vẫn nên chuẩn bị một khoản tiền nhỏ (~40M) để đóng các tạp phí ban đầu, sau đó nhà trường sẽ xét duyệt hồ sơ và hoàn lại tiền học bổng theo quy định.
+
+👇 *Để biết chính xác mức Học bổng bạn có thể đạt được dựa trên Điểm trung bình hiện tại, hãy nhấn nút phía dưới!*""",
         "buttons": [
             {"text": "💰 Tính phí ưu đãi", "callback": "start_lead_form"},
             {"text": "📞 Gặp tư vấn viên", "callback": "show_contact"}
@@ -155,14 +250,41 @@ SCRIPTED_ANSWERS = {
     },
 
     "co_hoi_viec_lam": {
-        "text": """💼 **THỰC TẬP & CƠ HỘI VIỆC LÀM TẠI ĐÀI LOAN (Kỳ 2026)**\n\nDu học Đài Loan không chỉ là học tập, mà còn là bước khởi đầu cho sự nghiệp quốc tế bền vững.\n\n🔹 **Trong quá trình học:** \n- Bạn được phép đi làm thêm 20h/tuần (thu nhập ~15-18 triệu VNĐ/tháng).\n- Hệ VHVL thực tập tại doanh nghiệp đối tác với mức lương hỗ trợ lên đến 22 triệu VNĐ/tháng.\n\n🔹 **Sau khi tốt nghiệp:**\n- SIGE cam kết kết nối sinh viên với các doanh nghiệp tại Đài Loan để làm việc chính thức.\n- Mức lương khởi điểm cho kĩ sư/biên dịch trình độ đại học từ **31.150 TWD/tháng** (~25 triệu VNĐ) trở lên.\n- Hỗ trợ thủ tục chuyển đổi sang Visa lao động dài hạn hoặc định cư.\n\n👉 *Đài Loan đang rất thiếu nhân lực chất lượng cao trong các ngành Công nghệ, Dịch vụ và Y tế!*""",
+        "text": """💼 THỰC TẬP & CƠ HỘI VIỆC LÀM TẠI ĐÀI LOAN (Kỳ 2026)
+
+Du học Đài Loan không chỉ là học tập, mà còn là bước khởi đầu cho sự nghiệp quốc tế bền vững.
+
+🔹 **Trong quá trình học:** 
+- Đi làm thêm 20h/tuần (thu nhập ~15-18 triệu VNĐ/tháng).
+- Hệ VHVL thực tập tại doanh nghiệp đối tác lớn như ASE, Liteon với mức trợ cấp lên đến ~22-25 triệu VNĐ/tháng (28.590 TWD).
+
+🔹 **Sau khi tốt nghiệp:**
+- SIGE cam kết kết nối sinh viên làm việc cho các tập đoàn với mức lương kỹ sư chính thức từ **31.150 TWD/tháng** trở lên.
+- Hỗ trợ thủ tục chuyển đổi sang Visa lao động dài hạn hoặc định cư.
+
+👉 *Đài Loan đang rất thiếu nhân lực chất lượng cao trong các ngành Công nghệ, Dịch vụ và Y tế!*""",
         "buttons": [
             {"text": "💼 Tìm việc làm lương cao", "callback": "start_lead_form"}
         ]
     },
 
     "du_hoc_dai_loan": {
-        "text": """🇹🇼 **HỆ SINH THÁI DU HỌC SIGE - TẦM NHÌN 20 NĂM**\n\nChào mừng bạn đến với SIGE AI - hệ thống hỗ trợ du học chuyên sâu được vận hành bởi Viện Khoa học Giáo dục Toàn Cầu.\n\n✨ **Tại sao bạn nên chọn SIGE?**\n- **Đối tác Chiến lược:** Liên kết trực tiếp với các trường đại học hàng đầu, đảm bảo tỷ lệ đỗ trường 99%.\n- **Bảo trợ Trọn đời:** Chúng tôi có văn phòng tại Đài Loan để hỗ trợ bạn những lúc gặp khó khăn trong sinh hoạt, ốm đau hay chuyển công tác.\n- **Minh bạch:** Phí dịch vụ rõ ràng, lộ trình đào tạo bài bản.\n\n✨ **Vibe từ Viện trưởng:**\n> *"Với mạng lưới 20 năm tâm huyết tại Đài Loan của tôi, SIGE không chỉ đưa bạn đi học, mà là đưa bạn vào một hệ sinh thái bảo trợ trọn đời. Sự thành công của sinh viên là thước đo giá trị lớn nhất của Viện SIGE."* \n— **ThS. Nguyễn Thị Điệp** (Viện trưởng SIGE)\n\n📍 Địa chỉ: Tầng 4, Tòa VINATA 2B, 289 Khuất Duy Tiến, TP. Hà Nội.\n🌐 Website: **www.sige.edu.vn**\nĐể nhận tư vấn lộ trình 1-1 miễn phí, vui lòng để lại số điện thoại!""",
+        "text": """🇹🇼 HỆ SINH THÁI DU HỌC SIGE - TẦM NHÌN 20 NĂM
+
+Chào mừng bạn đến với SIGE AI - hệ thống hỗ trợ du học chuyên sâu được vận hành bởi Viện Khoa học Giáo dục Toàn Cầu.
+
+✨ Tại sao bạn nên chọn SIGE?
+- Đối tác Chiến lược: Liên kết trực tiếp với các trường đại học hàng đầu, đảm bảo tỷ lệ đỗ trường 99%.
+- Bảo trợ Trọn đời: Chúng tôi có văn phòng tại Đài Loan để hỗ trợ bạn những lúc gặp khó khăn trong sinh hoạt, ốm đau hay chuyển công tác.
+- Minh bạch: Phí dịch vụ rõ ràng, lộ trình đào tạo bài bản.
+
+✨ Vibe từ Viện trưởng:
+> *"Với mạng lưới 20 năm tâm huyết tại Đài Loan của tôi, SIGE không chỉ đưa bạn đi học, mà là đưa bạn vào một hệ sinh thái bảo trợ trọn đời. Sự thành công của sinh viên là thước đo giá trị lớn nhất của Viện SIGE."* 
+— ThS. Nguyễn Thị Điệp (Viện trưởng SIGE)
+
+📍 Địa chỉ: Tầng 4, Tòa VINATA 2B, 289 Khuất Duy Tiến, TP. Hà Nội.
+🌐 Website: www.sige.edu.vn
+Để nhận tư vấn lộ trình 1-1 miễn phí, vui lòng để lại số điện thoại!""",
         "buttons": [
             {"text": "🚀 Đăng Ký Tư Vấn VIP 1-1", "callback": "start_lead_form"}
         ]
@@ -170,18 +292,19 @@ SCRIPTED_ANSWERS = {
 }
 
 # Mapping of common phrase patterns to keys
+# Each regex aims to capture the "core" intent with minimal word overhead
 QUERY_MAPPING = {
     # 10 Psychological Triggers
-    r"đặt lịch|hẹn|đăng ký lịch|tư vấn ngay": "case_1_dat_lich",
+    r"đặt lịch|hẹn|đăng ký lịch|tư vấn ngay|start_lead_form": "case_1_dat_lich",
     r"chi phí|giá|bao nhiêu tiền|tổng tiền|tài chính|học phí|sinh hoạt phí|gói dịch vụ|trọn gói": "case_2_chi_phi",
     r"ngành|học ngành|định hướng|chuyên ngành": "case_3_chon_nganh",
-    r"dịch vụ|cung cấp gì|có gì": "case_5_dich_vu",
+    r"dịch vụ|cung cấp gì|có gì|show_program_menu": "case_5_dich_vu",
     r"lừa đảo|thật không|có tốt không|làm gì mà|có chắc|sợ": "case_6_nghi_van",
     r"bố mẹ|phụ huynh|gia đình|hỏi ý kiến|bàn với nhà": "case_7_phu_huynh",
     r"ở xa|tỉnh lẻ|ngoại thành|không ở hà nội|ngoại tỉnh": "case_10_o_xa",
-    r"like|thả tim|hello|hi|chào|bắt đầu|tư vấn|tu van|tue vấn|tư vẩn|menu": "case_4_like_tuong_tac",
+    r"like|thả tim|hello|hi|chào|bắt đầu|tư vấn|tu van|tue vấn|tư vẩn|menu|get_started": "case_4_like_tuong_tac",
 
-    # Standard Knowledge Base Triggers
+    # Standard Knowledge Base Triggers (Routing to legacy scripts, keeping them accessible)
     r"trường|danh sách|đại học|list trường": "danh_sach_truong",
     r"1\+4|dự bị|học tiếng trước": "hoc_bong_14",
     r"vhvl|vừa học làm|vừa học vừa làm|thực tập có lương": "he_vhvl_detail",
@@ -195,34 +318,20 @@ QUERY_MAPPING = {
     r"gói dịch vụ|gói tư vấn|trọn gói": "tai_chinh_goi_dich_vu"
 }
 
-def get_scripted_response(query: str) -> Optional[str]:
+def get_scripted_response(query: str) -> Optional[dict]:
     """
     Checks if the user query matches any scripted response keywords.
-    Returns the string text if found, otherwise None.
-    Appends button text natively so it works on Zalo OA without templates.
+    Returns the dictionary (text + buttons) if found, otherwise None.
     """
     query_clean = query.lower().strip()
     
-    response_obj = None
-    
-    # 1. Exact match check
+    # 1. Exact match check (for button-passed text)
     if query_clean in SCRIPTED_ANSWERS:
-        response_obj = SCRIPTED_ANSWERS[query_clean]
+        return SCRIPTED_ANSWERS[query_clean]
         
-    # 2. Pattern match check
-    if not response_obj:
-        for pattern, key in QUERY_MAPPING.items():
-            if re.search(pattern, query_clean):
-                response_obj = SCRIPTED_ANSWERS[key]
-                break
-                
-    if response_obj:
-        text = response_obj.get("text", "")
-        buttons = response_obj.get("buttons", [])
-        if buttons:
-            text += "\n\n(Bạn có thể nhấn vào Menu trên màn hình hoặc gõ các yêu cầu sau: "
-            text += ", ".join([f"'{b['text']}'" for b in buttons])
-            text += ")"
-        return text
-        
+    # 2. Pattern match check (for user typed text)
+    for pattern, key in QUERY_MAPPING.items():
+        if re.search(pattern, query_clean):
+            return SCRIPTED_ANSWERS[key]
+            
     return None
