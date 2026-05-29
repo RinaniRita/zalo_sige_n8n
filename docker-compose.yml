@@ -1,0 +1,22 @@
+volumes:
+  zalo_n8n_data:
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: zalo_n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    env_file:
+      - .env
+    environment:
+      - N8N_HOST=${SUBDOMAIN:-localhost}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - NODE_ENV=production
+      - WEBHOOK_URL=https://${SUBDOMAIN:-localhost}
+      - GENERIC_TIMEZONE=${GENERIC_TIMEZONE:-UTC}
+      - GOOGLE_SHEET_ID=${GOOGLE_SHEET_ID}
+    volumes:
+      - zalo_n8n_data:/home/node/.n8n

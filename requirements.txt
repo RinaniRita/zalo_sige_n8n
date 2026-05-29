@@ -1,0 +1,24 @@
+# ── Web Framework ──────────────────────────────────────────────
+fastapi
+uvicorn[standard]
+
+# ── AI / LLM ───────────────────────────────────────────────────
+openai
+tiktoken
+
+# ── Vector Store ───────────────────────────────────────────────
+faiss-cpu
+numpy
+
+# ── LangChain (bot_server legacy + scripted_response) ──────────
+langchain
+langchain-openai
+langchain-community
+
+# ── Database ───────────────────────────────────────────────────
+# SQLite3 is built into Python — no package needed
+
+# ── Utilities ──────────────────────────────────────────────────
+python-dotenv
+requests
+pydantic

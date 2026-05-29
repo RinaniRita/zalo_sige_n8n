@@ -1,0 +1,70 @@
+{
+  "name": "Zalo OA Lead to Google Sheets (Manual Map)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "zalo-internal",
+        "options": {}
+      },
+      "id": "e43b1285-d60f-488d-a417-2f63f5728a47",
+      "name": "Webhook Zalo OA",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [180, 240],
+      "webhookId": "03bb7e5c-cb32-4740-ac2d-5ed5a1f6a1d8"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1jGLA9AxoHwuuUF_hrfDAsvUCDYghPw3UpDDtCc4zeaU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Siêu nóng 911",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Số điện thoại": "={{ $json.body.phone }}",
+            "Tên FB": "={{ $json.body.full_name }}",
+            "Mail": "={{ $json.body.email }}"
+          },
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "id": "e6745124-7ef8-4682-be20-1a1a7428f52f",
+      "name": "Save to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [400, 240]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Zalo OA": {
+      "main": [
+        [
+          {
+            "node": "Save to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f7d7fb32-9f15-4ba2-a6f9-03c734898514",
+  "id": "vL98Kz8Yq2v5g4b9",
+  "tags": []
+}
