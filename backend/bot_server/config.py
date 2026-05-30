@@ -10,6 +10,7 @@ load_dotenv(dotenv_path=_ENV_PATH, override=True)
 ZALO_APP_ID          = os.getenv("ZALO_APP_ID")
 ZALO_SECRET_KEY      = os.getenv("ZALO_SECRET_KEY")
 ZALO_OA_ACCESS_TOKEN = os.getenv("ZALO_OA_ACCESS_TOKEN")
+ZALO_REFRESH_TOKEN   = os.getenv("ZALO_REFRESH_TOKEN")
 
 # Webhook URLs
 WEBHOOK_URL      = os.getenv("WEBHOOK_URL")

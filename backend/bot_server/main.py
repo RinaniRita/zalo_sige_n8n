@@ -2,29 +2,76 @@ from fastapi import FastAPI, Request, Response, BackgroundTasks
 import hashlib
 import requests
 import json
-from backend.bot_server.config import ZALO_APP_ID, ZALO_SECRET_KEY, ZALO_OA_ACCESS_TOKEN, N8N_WEBHOOK_URL
+from dotenv import set_key
+from backend.bot_server import config
 from backend.bot_server.scripted_response import get_scripted_response
 from backend.bot_server.services.rag_service import retrieve_context
 from backend.bot_server.services.llm_service import generate_rag_response, extract_lead_info
 
 app = FastAPI(title="Zalo Bot Server", version="2.0")
 
-def send_zalo_message(user_id: str, text: str, buttons: list = None):
+def refresh_zalo_token():
+    """
+    Refreshes the Zalo Access Token using the Refresh Token.
+    Saves the new tokens directly to the .env file and updates runtime config.
+    """
+    print("[Zalo Token] Attempting to refresh access token...")
+    if not config.ZALO_APP_ID or not config.ZALO_SECRET_KEY or not config.ZALO_REFRESH_TOKEN:
+        print("[Zalo Token Error] Missing APP_ID, SECRET_KEY, or REFRESH_TOKEN")
+        return False
+
+    url = "https://oauth.zaloapp.com/v4/oa/access_token"
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "secret_key": config.ZALO_SECRET_KEY
+    }
+    payload = {
+        "refresh_token": config.ZALO_REFRESH_TOKEN,
+        "app_id": config.ZALO_APP_ID,
+        "grant_type": "refresh_token"
+    }
+
+    try:
+        res = requests.post(url, headers=headers, data=payload)
+        res_json = res.json()
+        
+        if "access_token" in res_json and "refresh_token" in res_json:
+            new_access_token = res_json["access_token"]
+            new_refresh_token = res_json["refresh_token"]
+            
+            # Update .env file persistently
+            set_key(config._ENV_PATH, "ZALO_OA_ACCESS_TOKEN", new_access_token)
+            set_key(config._ENV_PATH, "ZALO_REFRESH_TOKEN", new_refresh_token)
+            
+            # Update runtime config
+            config.ZALO_OA_ACCESS_TOKEN = new_access_token
+            config.ZALO_REFRESH_TOKEN = new_refresh_token
+            
+            print("[Zalo Token] Successfully refreshed and saved new tokens.")
+            return True
+        else:
+            print(f"[Zalo Token Error] Failed to refresh: {res_json}")
+            return False
+    except Exception as e:
+        print(f"[Zalo Token Error] Exception during refresh: {e}")
+        return False
+
+def send_zalo_message(user_id: str, text: str, buttons: list = None, is_retry: bool = False):
     """
     Sends a message to a Zalo user via Zalo OA OpenAPI.
-    Supports Zalo Action Buttons (Template payload)
+    Supports Zalo Action Buttons (Template payload).
+    Automatically refreshes token if expired.
     """
-    if not ZALO_OA_ACCESS_TOKEN:
+    if not config.ZALO_OA_ACCESS_TOKEN:
         print("Missing ZALO_OA_ACCESS_TOKEN")
         return
         
     if text:
         text = text.replace("**", "")
 
-        
     url = "https://openapi.zalo.me/v3.0/oa/message/cs"
     headers = {
-        "access_token": ZALO_OA_ACCESS_TOKEN,
+        "access_token": config.ZALO_OA_ACCESS_TOKEN,
         "Content-Type": "application/json"
     }
     
@@ -60,7 +107,18 @@ def send_zalo_message(user_id: str, text: str, buttons: list = None):
     
     try:
         res = requests.post(url, headers=headers, json=payload)
-        print(f"[Zalo API Response] {res.status_code}: {res.text}")
+        res_json = res.json()
+        print(f"[Zalo API Response] {res.status_code}: {res_json}")
+        
+        # Check for token expiration (error code -216) or general invalid token errors
+        if res_json.get("error") != 0 and "token" in str(res_json.get("message", "")).lower():
+            if not is_retry:
+                print("[Zalo API] Token seems invalid or expired. Triggering auto-refresh...")
+                if refresh_zalo_token():
+                    # Retry once with the new token
+                    send_zalo_message(user_id, text, buttons, is_retry=True)
+            else:
+                print("[Zalo API] Retry failed. Please check Zalo credentials.")
     except Exception as e:
         print(f"Failed to send Zalo message: {e}")
 
@@ -68,12 +126,12 @@ def push_to_n8n(data: dict):
     """
     Pushes extracted lead data to n8n webhook.
     """
-    if not N8N_WEBHOOK_URL:
+    if not config.N8N_WEBHOOK_URL:
         print("Missing N8N_WEBHOOK_URL")
         return
         
     try:
-        res = requests.post(N8N_WEBHOOK_URL, json=data)
+        res = requests.post(config.N8N_WEBHOOK_URL, json=data)
         print(f"[n8n API Response] {res.status_code}: {res.text}")
     except Exception as e:
         print(f"Failed to push to n8n: {e}")
@@ -198,7 +256,7 @@ async def zalo_webhook(request: Request, background_tasks: BackgroundTasks):
         expected_mac = x_zevent_signature.replace("mac=", "") if x_zevent_signature.startswith("mac=") else x_zevent_signature
         timestamp = request.headers.get("x-zevent-timestamp", "")
         # Công thức: sha256(app_id + body_json + timestamp + secret_key)
-        raw_mac = f"{ZALO_APP_ID}{body_str}{timestamp}{ZALO_SECRET_KEY}"
+        raw_mac = f"{config.ZALO_APP_ID}{body_str}{timestamp}{config.ZALO_SECRET_KEY}"
         mac = hashlib.sha256(raw_mac.encode('utf-8')).hexdigest()
         
         if mac != expected_mac:
