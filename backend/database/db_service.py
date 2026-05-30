@@ -61,6 +61,18 @@ def init_db():
                 num_chunks      INTEGER NOT NULL,
                 ingest_at       TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
+
+            -- ── Nudge scheduling state per Zalo user ─────────────────────────
+            -- Tracks the 12h / 24h follow-up nudge cycle.
+            -- cancelled=1 means the user replied after a nudge was sent;
+            -- no new nudge cycle will start for this entry.
+            CREATE TABLE IF NOT EXISTS nudge_state (
+                zalo_user_id     TEXT PRIMARY KEY,
+                last_user_msg_at TIMESTAMP NOT NULL,
+                nudge1_sent      INTEGER DEFAULT 0,
+                nudge2_sent      INTEGER DEFAULT 0,
+                cancelled        INTEGER DEFAULT 0
+            );
         """)
         conn.commit()
         logger.info("Database initialised at %s", DB_PATH)
@@ -282,5 +294,113 @@ def get_last_ingest() -> dict | None:
             "SELECT * FROM ingest_events ORDER BY ingest_at DESC LIMIT 1"
         ).fetchone()
         return dict(row) if row else None
+    finally:
+        conn.close()
+
+
+# ─── Nudge State ─────────────────────────────────────────────────────────────
+
+def upsert_nudge_state(zalo_user_id: str) -> None:
+    """
+    Called every time a user sends a message AND no nudge has been sent yet.
+    Resets (or creates) the nudge cycle timer to NOW.
+    If a nudge has already been sent the caller must NOT call this — use
+    cancel_nudge() instead.
+    """
+    conn = get_connection()
+    try:
+        conn.execute(
+            """
+            INSERT INTO nudge_state (zalo_user_id, last_user_msg_at, nudge1_sent, nudge2_sent, cancelled)
+            VALUES (?, datetime('now'), 0, 0, 0)
+            ON CONFLICT(zalo_user_id) DO UPDATE SET
+                last_user_msg_at = datetime('now'),
+                nudge1_sent = 0,
+                nudge2_sent = 0,
+                cancelled = 0
+            """,
+            (zalo_user_id,),
+        )
+        conn.commit()
+        logger.info("[Nudge] Timer reset for user=%s", zalo_user_id)
+    except Exception as e:
+        logger.error("upsert_nudge_state error: %s", e)
+    finally:
+        conn.close()
+
+
+def cancel_nudge(zalo_user_id: str) -> None:
+    """
+    Permanently cancel the nudge cycle for a user.
+    Called when the user replies AFTER at least one nudge has been sent.
+    Sets cancelled=1 so the background scheduler will skip this user forever.
+    """
+    conn = get_connection()
+    try:
+        conn.execute(
+            """
+            UPDATE nudge_state
+            SET cancelled = 1
+            WHERE zalo_user_id = ?
+            """,
+            (zalo_user_id,),
+        )
+        conn.commit()
+        logger.info("[Nudge] Cycle permanently cancelled for user=%s", zalo_user_id)
+    except Exception as e:
+        logger.error("cancel_nudge error: %s", e)
+    finally:
+        conn.close()
+
+
+def get_nudge_state(zalo_user_id: str) -> dict | None:
+    """Return the current nudge state row for a user, or None if not found."""
+    conn = get_connection()
+    try:
+        row = conn.execute(
+            "SELECT * FROM nudge_state WHERE zalo_user_id = ?",
+            (zalo_user_id,),
+        ).fetchone()
+        return dict(row) if row else None
+    finally:
+        conn.close()
+
+
+def get_pending_nudge_users() -> list[dict]:
+    """
+    Return all users that:
+    - are NOT cancelled
+    - still have at least one nudge to send
+    """
+    conn = get_connection()
+    try:
+        rows = conn.execute(
+            """
+            SELECT * FROM nudge_state
+            WHERE cancelled = 0
+              AND (nudge1_sent = 0 OR nudge2_sent = 0)
+            """
+        ).fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
+def mark_nudge_sent(zalo_user_id: str, nudge_num: int) -> None:
+    """Mark nudge 1 or 2 as sent for a user."""
+    if nudge_num not in (1, 2):
+        logger.error("mark_nudge_sent: invalid nudge_num=%s", nudge_num)
+        return
+    field = f"nudge{nudge_num}_sent"
+    conn = get_connection()
+    try:
+        conn.execute(
+            f"UPDATE nudge_state SET {field} = 1 WHERE zalo_user_id = ?",
+            (zalo_user_id,),
+        )
+        conn.commit()
+        logger.info("[Nudge] Marked nudge%d sent for user=%s", nudge_num, zalo_user_id)
+    except Exception as e:
+        logger.error("mark_nudge_sent error: %s", e)
     finally:
         conn.close()

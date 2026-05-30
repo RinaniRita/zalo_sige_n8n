@@ -1,4 +1,6 @@
 from fastapi import FastAPI, Request, Response, BackgroundTasks
+from contextlib import asynccontextmanager
+import asyncio
 import hashlib
 import requests
 import json
@@ -7,8 +9,26 @@ from backend.bot_server import config
 from backend.bot_server.scripted_response import get_scripted_response
 from backend.bot_server.services.rag_service import retrieve_context
 from backend.bot_server.services.llm_service import generate_rag_response, extract_lead_info
+from backend.database.db_service import (
+    get_nudge_state,
+    upsert_nudge_state,
+    cancel_nudge,
+)
+from backend.bot_server.nudge_service import nudge_scheduler_loop
 
-app = FastAPI(title="Zalo Bot Server", version="2.0")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Start the nudge scheduler background task when the server boots."""
+    loop = asyncio.get_event_loop()
+    task = loop.create_task(nudge_scheduler_loop(send_zalo_message))
+    print("[Nudge] Background scheduler started.")
+    yield
+    task.cancel()
+    print("[Nudge] Background scheduler stopped.")
+
+
+app = FastAPI(title="Zalo Bot Server", version="2.0", lifespan=lifespan)
 
 def refresh_zalo_token():
     """
@@ -271,10 +291,21 @@ async def zalo_webhook(request: Request, background_tasks: BackgroundTasks):
         if event_name == "user_send_text":
             user_id = data.get("sender", {}).get("id")
             message = data.get("message", {}).get("text", "")
-            
-            # Đưa tác vụ xử lý tin nhắn vào Background để trả về HTTP 200 ngay lập tức cho Zalo,
-            # tránh việc Zalo chờ lâu quá sẽ gửi lại webhook (Retry).
+
             if user_id and message:
+                # ── Nudge state management ───────────────────────────────────
+                # Must happen synchronously here (before background task)
+                # so the DB is updated before the scheduler next wakes.
+                nudge = get_nudge_state(user_id)
+
+                if nudge and (nudge["nudge1_sent"] or nudge["nudge2_sent"]) and not nudge["cancelled"]:
+                    # User replied AFTER a nudge was sent → permanently terminate
+                    cancel_nudge(user_id)
+                    print(f"[Nudge] User {user_id} replied after nudge — cycle permanently terminated.")
+                elif not (nudge and nudge["cancelled"]):
+                    # No nudge sent yet (or first ever message) → reset/start timer
+                    upsert_nudge_state(user_id)
+
                 background_tasks.add_task(process_zalo_message, user_id, message)
         else:
             print(f"[Skip] Bo qua su kien khong phai tin nhan van ban: {event_name}")
