@@ -86,6 +86,147 @@ Tùy vào năng lực học tập và nguyện vọng, cán bộ tuyển sinh s�
 📞 Nhắn cho SIGE xin [SỐ ĐIỆN THOẠI] của bạn, cán bộ tuyển sinh sẽ gọi điện định hướng trực tiếp để không chọn sai trường nhé!"""
     },
 
+    "truong_chinh_tu": {
+        "text": """🏫 ĐẠI HỌC CHÍNH TU - CHƯƠNG TRÌNH VĂN BẰNG 2 TẬP ĐOÀN ASE
+
+Đại học Chính Tu (Cheng Shiu University) nằm tại Cao Hùng, nổi bật với chương trình đào tạo định hướng ứng dụng và môi trường thân thiện với du học sinh.
+
+🔥 ĐẶC BIỆT: CHƯƠNG TRÌNH VĂN BẰNG 2 - TẬP ĐOÀN ASE (Kỳ tháng 9/2026)
+✅ Nhận hỗ trợ học phí, KTX, vé máy bay, visa từ chính phủ Đài Loan.
+✅ Tập đoàn ASE tài trợ 10.000 Đài tệ/tháng sinh hoạt phí.
+✅ Cam kết làm việc 2 năm hưởng nguyên lương sau khi tốt nghiệp (Thu nhập kỹ sư ~570.000 Đài tệ/năm).
+✅ Yêu cầu: Nam (23-30 tuổi), Tốt nghiệp ĐH khối Kỹ thuật (Điện tử, Điện cơ, Tự động hóa). IELTS 4.5/TOEIC 450.
+✅ Tổng chi phí thủ tục cực ưu đãi: 2.200 USD (Trọn gói dịch thuật, khám SK, visa, vé máy bay...).
+
+📞 Cơ hội cực hiếm với số lượng có hạn! Bạn vui lòng để lại [SỐ ĐIỆN THOẠI], Trưởng phòng Tuyển sinh sẽ gọi phân tích hồ sơ của bạn cho chương trình ASE ngay nhé!"""
+    },
+
+    "truong_ky_nam": {
+        "text": """🏫 ĐẠI HỌC QUỐC LẬP KỴ NAM - TRƯỜNG ĐẠI HỌC DANH GIÁ VÀ XANH NHẤT ĐÀI LOAN
+
+Đại học Quốc lập Kỵ Nam (National Chi Nan University) nằm tại Đầm Nhật Nguyệt tuyệt đẹp. Đây là trường Đại học công lập hiếm hoi có quỹ học bổng "Khủng" nhất cho sinh viên quốc tế!
+
+🎓 CHƯƠNG TRÌNH 1+4 (Miễn học phí năm 1)
+- Học tiếng Trung năm 1, các năm sau miễn học phí nếu đạt TOCFL và điểm số yêu cầu.
+- Các ngành cực HOT: Du lịch KS, CNTT, Hóa ứng dụng, Kỹ thuật điện...
+
+🎓 CHƯƠNG TRÌNH THẠC SĨ (Miễn 100% học phí 2 năm)
+- Tặng thêm trợ cấp 6.600 Đài tệ/tháng tiền tiêu dùng.
+- Có cả hệ tiếng Anh (IELTS 7.0+) và tiếng Trung (TOCFL B1+).
+
+📞 Nếu bạn có GPA trên 7.0, hãy để lại ngay [SỐ ĐIỆN THOẠI] để SIGE giữ cho bạn các suất học bổng công lập cực kỳ giá trị này nhé!"""
+    },
+
+    "truong_linh_dong": {
+        "text": """🏫 ĐẠI HỌC KHCN LĨNH ĐÔNG - TOP ĐẦU ĐÀI TRUNG, THẾ MẠNH THIẾT KẾ & DU LỊCH
+
+Đại học Lĩnh Đông (Ling Tung University) nằm tại trung tâm TP. Đài Trung, đối diện 4 khu công nghệ cao, tạo ra cơ hội làm thêm và thực tập cực kỳ phong phú.
+
+🎓 CHƯƠNG TRÌNH 1+4 (KHÔNG YÊU CẦU TIẾNG TRUNG ĐẦU VÀO)
+- Trợ cấp năm đầu lên tới 30.000 Đài tệ.
+- Các năm sau học bổng 25.000 - 50.000 Đài tệ nếu đạt thành tích tốt.
+- Miễn phí xe bus 10-12km, cực kỳ tiện lợi đi làm thêm.
+
+🎓 CHƯƠNG TRÌNH VỪA HỌC VỪA LÀM (TÂN HƯỚNG NAM)
+- Học bổng học kỳ 1 lên tới 25.000 Đài tệ & Miễn phí KTX kỳ đầu.
+- Yêu cầu tiếng Trung cơ bản (TOCFL A1+).
+- Được thực tập đúng chuyên ngành có hưởng lương theo quy định Đài Loan.
+
+📞 Khu vực Đài Trung cực kỳ dễ kiếm việc làm thêm! Bạn hãy để lại [SỐ ĐIỆN THOẠI] để chuyên viên SIGE tư vấn chọn ngành tại Lĩnh Đông ngay nhé!"""
+    },
+
+    "truong_minh_truyen": {
+        "text": """🏫 ĐẠI HỌC QUỐC TẾ MINH TRUYỀN (MCU) - TRƯỜNG CHUẨN MỸ DUY NHẤT TẠI ĐÀI LOAN
+
+Minh Truyền là ngôi trường đẳng cấp Châu Á (Top bảng xếp hạng THE), có cơ sở đào tạo ngay tại Mỹ. Sinh viên có cơ hội học chuyển tiếp 2+2 lấy 2 bằng đại học của Mỹ và Đài Loan!
+
+🔥 ĐẶC BIỆT: TẬP ĐOÀN LITTEON (TOP 50 CHÂU Á) TÀI TRỢ 100% HỌC PHÍ
+- Tài trợ 100% học phí suốt 4 năm học.
+- Cam kết việc làm 2 năm tại Litteon sau khi tốt nghiệp.
+
+🎓 CÁC HỆ ĐÀO TẠO ĐA DẠNG:
+- Hệ 1+4: Không yêu cầu tiếng Trung đầu vào, miễn 100% học phí năm ngôn ngữ.
+- Hệ Tự túc Tiếng Anh 100%: Dành cho các bạn có IELTS (Đạt IELTS 6.0 trở lên có ngay học bổng 20.000 - 50.000 TWD).
+- Hệ Ngôn ngữ (Cơ sở Kim Môn): Chi phí siêu rẻ, học phí chỉ 18.000 TWD/3 tháng.
+
+📞 Minh Truyền là trường cực kỳ "hot" và xét duyệt hồ sơ kỹ. Bạn hãy để lại ngay [SỐ ĐIỆN THOẠI] để SIGE giữ suất học bổng Litteon hoặc tư vấn lộ trình phù hợp nhé!"""
+    },
+
+    "truong_trung_tin": {
+        "text": """🏫 ĐẠI HỌC KHOA HỌC KỸ THUẬT TRUNG TÍN (CTBC) - TÀI TRỢ BỞI NGÂN HÀNG LỚN NHẤT ĐÀI LOAN
+
+Đại học Trung Tín được chống lưng bởi Tập đoàn Tài chính CTBC siêu hùng hậu! Trường nằm ngay sát "thung lũng silicon" Nam Đài Loan, cực kỳ phát triển về Bán dẫn và AI.
+
+🎓 CHƯƠNG TRÌNH 1+4 (KHÔNG YÊU CẦU TIẾNG TRUNG ĐẦU VÀO)
+- Miễn 100% học phí & tạp phí học kỳ đầu năm nhất.
+- Miễn 100% học phí học kỳ đầu năm hai.
+- Hết năm nhất đạt TOCFL A2 có cơ hội nhận 30.000 TWD.
+
+🎓 CHƯƠNG TRÌNH LIÊN THÔNG ĐẠI HỌC (DÀNH CHO SV ĐÃ HỌC 2 NĂM ĐH / TỐT NGHIỆP CĐ TẠI VN)
+- Hỗ trợ vé máy bay 9.000 TWD & Chi phí hành chính 10.000 TWD.
+- Được trợ cấp sinh hoạt 10.000 TWD/tháng HOẶC Trợ cấp thực tập lên tới 28.590 TWD/tháng!
+- Miễn phí KTX năm đầu.
+
+📞 Với sự hậu thuẫn từ hàng ngàn doanh nghiệp đối tác của ngân hàng Trung Tín, sinh viên không bao giờ lo thiếu việc làm! Bạn hãy để lại [SỐ ĐIỆN THOẠI] để SIGE tư vấn suất học bổng ngay nhé!"""
+    },
+
+    "truong_van_tao": {
+        "text": """🏫 ĐẠI HỌC NGOẠI NGỮ VĂN TẢO (WENZAO) - TRƯỜNG SỐ 1 VỀ NGOẠI NGỮ TẠI ĐÀI LOAN
+
+Văn Tảo là trường Đại học ĐẦU TIÊN và DUY NHẤT chuyên về ngoại ngữ tại Đài Loan. 11 năm liên tiếp đứng Top 1 trường Tư thục về triển vọng Quốc tế!
+
+🔥 ĐẶC QUYỀN ĐỘC QUYỀN DÀNH RIÊNG CHO HỌC SINH TỪ VIỆN SIGE:
+- Nhập học Sư phạm tiếng Anh, tiếng Trung, Phiên dịch chuyên nghiệp mà KHÔNG CẦN THI ĐẦU VÀO (chỉ xét hồ sơ).
+- Cam kết 4 năm KHÔNG tăng học phí.
+- Được học cùng lúc 2 khoa (Ngôn ngữ + QTKD/AI).
+
+🎓 HỌC BỔNG ĐẠI HỌC CỰC KHỦNG (Lên tới 100%):
+- Điểm cấp 3 từ 8.0 trở lên: Nhận học bổng 100% cho Sư phạm tiếng Trung, KD Quốc tế & Quản lý AI.
+- Nếu có chứng chỉ IELTS (6.0 - 7.0) hoặc TOCFL (A2 - B1): Cơ hội nhận học bổng 50% đến 100% tùy ngành.
+
+📞 Cơ hội cực hiếm để vào thẳng trường Top 1 ngôn ngữ! Bạn hãy để lại [SỐ ĐIỆN THOẠI] để SIGE giữ suất học bổng Văn Tảo ngay nhé!"""
+    },
+
+    "truong_y_duoc": {
+        "text": """🏫 ĐẠI HỌC Y DƯỢC TRUNG QUỐC (CMU) - TRƯỜNG Y KHOA HÀNG ĐẦU CHÂU Á
+
+Bạn muốn học Y tại Đài Loan? ĐH Y Dược Trung Quốc (CMU) tại Đài Trung chính là lựa chọn số 1! Trường sở hữu hệ thống bệnh viện đa khoa lớn đạt chuẩn quốc tế (JCI) cho sinh viên thực tập.
+
+🎓 CHƯƠNG TRÌNH 1+4 (CÁC NGÀNH: HỘ LÝ, DƯỢC HỌC, VẬT LÝ TRỊ LIỆU, HÓA MỸ PHẨM)
+- Tổng thời gian học 5 năm (1 năm ngôn ngữ + 4 năm chuyên ngành).
+- Không yêu cầu chứng chỉ tiếng khi báo danh! (Hết năm nhất học tại trường CẦN đạt TOCFL A2).
+- Môi trường Y khoa khắt khe, rèn luyện tay nghề cực đỉnh, cơ hội làm việc trong môi trường y tế quốc tế.
+
+⚠️ CẦN LƯU Ý: Trường xét duyệt cực kỳ gắt gao (GPA > 7.0, tuổi 18-20, không tiền án). Và trường có lịch phỏng vấn cố định từ tháng 2 và tháng 5!
+
+📞 Hệ Y Dược chốt hồ sơ rất nhanh! Bạn hãy để lại ngay [SỐ ĐIỆN THOẠI] để SIGE kiểm tra điều kiện và đặt lịch phỏng vấn sớm nhất nhé!"""
+    },
+
+    "thong_tin_sige": {
+        "text": """🏆 VIỆN KHOA HỌC GIÁO DỤC TOÀN CẦU (VIỆN SIGE) - ĐƠN VỊ TIÊN PHONG XÂY DỰNG HỆ SINH THÁI GIÁO DỤC VIỆT NAM - ĐÀI LOAN
+
+Viện SIGE tự hào là đơn vị tư vấn du học DUY NHẤT tại Việt Nam có hệ thống văn phòng hỗ trợ trực tiếp tại Đài Loan (Đài Bắc, Đào Viên, Cao Hùng)!
+
+🌟 Đặc quyền khi đồng hành cùng SIGE:
+- Tỷ lệ bay đúng ngành, đúng trường lên đến 95%.
+- Hỗ trợ toàn diện từ lúc làm hồ sơ, nhập cảnh đến khi ổn định cuộc sống và tìm việc làm sau tốt nghiệp.
+- Mạng lưới đối tác cực khủng: Kết nối hàng ngàn suất học bổng toàn phần từ các tập đoàn hàng đầu thế giới (như ASE Group, Litteon).
+
+📞 Chọn SIGE là chọn sự an tâm tuyệt đối! Bạn hãy để lại [SỐ ĐIỆN THOẠI] để chuyên viên của Viện hỗ trợ bạn lộ trình du học tiết kiệm và hiệu quả nhất nhé!"""
+    },
+
+    "thong_tin_ase": {
+        "text": """🏭 TẬP ĐOÀN ASE - ĐỐI TÁC CHIẾN LƯỢC TOÀN CẦU CỦA VIỆN SIGE
+
+ASE Group là tập đoàn tiên phong kiến tạo tương lai công nghệ bán dẫn toàn cầu, thành lập năm 1984 tại Đài Loan. Đây là nhà cung cấp dịch vụ lắp ráp và kiểm thử bán dẫn (OSAT) lớn nhất thế giới!
+
+🌟 Tại sao Tập đoàn ASE lại đặc biệt quan trọng với sinh viên SIGE?
+- ASE tài trợ hàng ngàn suất học bổng toàn phần và hỗ trợ thực tập cho sinh viên thuộc hệ thống liên kết của SIGE.
+- Cơ hội làm việc trực tiếp trong hệ sinh thái của một tập đoàn công nghệ tỷ đô, đóng vai trò then chốt trong chuỗi cung ứng AI, 5G và IoT toàn cầu.
+
+📞 Bạn muốn nhận học bổng và có cơ hội làm việc tại Tập đoàn ASE? Hãy để lại [SỐ ĐIỆN THOẠI] để SIGE tư vấn chi tiết các ngành học được ASE tài trợ nhé!"""
+    },
+
     "hoc_bong_14": {
         "text": """🎯 CHƯƠNG TRÌNH HỆ CHUYÊN BAN QUỐC TẾ 1+4 (DỰ BỊ ĐẠI HỌC)
 
@@ -247,6 +388,15 @@ QUERY_MAPPING = {
     r"like|thả tim|hello|hi|chào|bắt đầu|tư vấn|tu van|tue vấn|tư vẩn|menu|get_started": "case_4_like_tuong_tac",
 
     # Standard Knowledge Base Triggers
+    r"chính tu|cheng shiu": "truong_chinh_tu",
+    r"kỵ nam|ky nam|chi nan": "truong_ky_nam",
+    r"lĩnh đông|linh dong|ling tung": "truong_linh_dong",
+    r"minh truyền|minh truyen|mcu": "truong_minh_truyen",
+    r"trung tín|trung tin|ctbc": "truong_trung_tin",
+    r"văn tảo|van tao|wenzao": "truong_van_tao",
+    r"y dược|y duoc|cmu": "truong_y_duoc",
+    r"sige|viện sige|vien sige|viện khoa học giáo dục": "thong_tin_sige",
+    r"ase|tập đoàn ase|tap doan ase": "thong_tin_ase",
     r"trường|danh sách|đại học|list trường": "danh_sach_truong",
     r"1\+4|dự bị|học tiếng trước": "hoc_bong_14",
     r"vhvl|vừa học làm|vừa học vừa làm|thực tập có lương": "he_vhvl_detail",
