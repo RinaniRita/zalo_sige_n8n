@@ -31,61 +31,15 @@ Hệ sinh thái do SIGE xây dựng tạo ra một chu trình khép kín giúp s
 
 # 3. Các trường đại học liên kết
 
-## Đại học Quốc tế Minh Truyền (MCU)
-**Tổng quan:** Là trường tiên phong tại Châu Á đạt chuẩn kiểm định Hoa Kỳ (MSCHE) và lọt top bảng xếp hạng THE. Trường có 5 cơ sở tại Đài Loan và 1 cơ sở tại Mỹ.
+Viện SIGE hiện đang liên kết chiến lược với các trường đại học hàng đầu tại Đài Loan. Chi tiết về từng trường sẽ được cập nhật đầy đủ trong thời gian tới. Trước mắt, đây là danh sách các trường đối tác:
 
-**Điểm nổi bật:**
-- Sở hữu Khoa Quản lý chuẩn AACSB (Top 6% thế giới).
-- Môi trường quốc tế với sinh viên đến từ hơn 100 quốc gia.
-- Đào tạo lãnh đạo nguồn cho các tập đoàn lớn như Liteon và ASE.
-
-**Chương trình đào tạo:** 
-- Chương trình 1+4 (Dự bị ngôn ngữ 1 năm + 4 năm Đại học).
-- Chương trình 2+2 (Lấy 2 bằng đại học của Việt Nam và Đài Loan/Mỹ).
-- Ngành mũi nhọn: Truyền thông, Thiết kế, QTKD, CNTT, Du lịch Khách sạn, Điện tử bán dẫn.
-
-**Học phí & Học bổng:**
-- Học phí: 46.000 - 70.000 TWD/kỳ.
-- Học bổng ngôn ngữ: Miễn 100% học phí năm đầu.
-- Học bổng tiếng Anh: Cấp theo chứng chỉ IELTS (từ 20.000 - 50.000 TWD).
-
-**Điều kiện tuyển sinh:** GPA mỗi học kỳ từ 7.0 trở lên; Độ tuổi 18-22.
-
-## Đại học Quốc lập Ky Nam (NCNU)
-**Tổng quan:** Tọa lạc tại khu du lịch Đầm Nhật Nguyệt, là Top 44 trường đại học xanh nhất thế giới.
-
-**Điểm nổi bật:** 
-- Diện tích 150 ha với cơ sở vật chất hiện đại: bể bơi chuẩn quốc gia, xe buýt miễn phí.
-- Có phòng khám trực thuộc bệnh viện Top 15/300 thế giới ngay trong khuôn viên.
-
-**Chương trình đào tạo:** 1+4, Thạc sĩ, Tiến sĩ các chuyên ngành Du lịch, Khoa học máy tính, Kỹ thuật điện, Quản lý thông tin.
-
-**Học phí & Học bổng:**
-- Học bổng 1+4: Miễn 100% học phí năm 1. Năm 2-3 miễn nếu đạt TOCFL A2+/B1+. Năm 4-5 miễn nếu GPA > 80.
-- Học bổng Thạc sĩ: Miễn 100% học phí 2 năm + trợ cấp 6.600 TWD/tháng.
-
-## Đại học Công nghệ Trung Tín (CTBC)
-**Tổng quan:** Trực thuộc ngân hàng CTBC (ngân hàng doanh nghiệp lớn nhất Đài Loan), đặt tại Đài Nam.
-
-**Điểm nổi bật:** 
-- Nằm sát "thung lũng silicon" của Nam Đài Loan.
-- Được ngân hàng và hàng ngàn doanh nghiệp đối tác tài trợ, đảm bảo thực tập và đầu ra.
-
-**Chương trình đào tạo:** 1+4, Văn bằng 2 ngành Bán dẫn, AI, Cơ khí, Điện lạnh.
-
-**Học bổng:** 
-- Miễn học phí và tạp phí kỳ đầu năm nhất.
-- Thưởng 30.000 TWD nếu đạt TOCFL A2 sau năm 1.
-- Hỗ trợ vé máy bay (9.000 TWD) và phí hành chính (10.000 TWD) cho hệ văn bằng 2.
-
-## Đại học KHKT Lĩnh Đông (LTU)
-**Tổng quan:** Tọa lạc tại Đài Trung, nổi tiếng với ngành Thiết kế thuộc Top 100 thế giới.
-
-**Chương trình đào tạo:** 1+4, Vừa học vừa làm (Tân Hướng Nam).
-
-**Học phí & Học bổng:** 
-- Trợ cấp năm nhất 30.000 TWD.
-- Học bổng các kỳ sau từ 25.000 - 50.000 TWD dựa trên thành tích học tập.
+1. Đại Học Chính Tu Đài Loan
+2. Trường Đại Học Quốc Lập Kỵ Nam
+3. Đại Học Khoa Học Công Nghệ Lĩnh Đông
+4. Trường Đại Học Minh Truyền
+5. Đại Học Công Nghệ Trung Tín Đài Loan
+6. Trường Đại Học Ngoại Ngữ Văn Tảo Đài Loan
+7. Trường Đại Học Y Dược Trung Quốc
 
 ---
 

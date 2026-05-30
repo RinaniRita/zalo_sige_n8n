@@ -72,11 +72,18 @@ Viện Khoa học Giáo dục Toàn Cầu (Viện SIGE) là đơn vị tiên pho
     "danh_sach_truong": {
         "text": """🏫 DANH SÁCH CÁC TRƯỜNG ĐẠI HỌC LIÊN KẾT CHIẾN LƯỢC
 
-Dạ, SIGE tự hào là đối tác tuyển sinh trực tiếp của các trường Top đầu Đài Loan như: ĐH Quốc tế Minh Truyền (MCU), ĐH Quốc lập Ky Nam (NCNU), ĐH Công nghệ Trung Tín (CTBC), ĐH KHKT Lĩnh Đông (LTU)...
+Dạ, Viện SIGE hiện đang liên kết chiến lược với các trường đại học hàng đầu tại Đài Loan, bao gồm:
+1. Đại Học Chính Tu Đài Loan
+2. Trường Đại Học Quốc Lập Kỵ Nam
+3. Đại Học Khoa Học Công Nghệ Lĩnh Đông
+4. Trường Đại Học Minh Truyền
+5. Đại Học Công Nghệ Trung Tín Đài Loan
+6. Trường Đại Học Ngoại Ngữ Văn Tảo Đài Loan
+7. Trường Đại Học Y Dược Trung Quốc
 
 Tùy vào năng lực học tập và nguyện vọng, cán bộ tuyển sinh sẽ chọn trường phù hợp nhất.
 
-📞 Nhắn cho SIGE xin [SỐ ĐIỆN THOẠI] của anh/chị, cán bộ tuyển sinh sẽ gọi điện định hướng trực tiếp để không chọn sai trường nhé!"""
+📞 Nhắn cho SIGE xin [SỐ ĐIỆN THOẠI] của bạn, cán bộ tuyển sinh sẽ gọi điện định hướng trực tiếp để không chọn sai trường nhé!"""
     },
 
     "hoc_bong_14": {
