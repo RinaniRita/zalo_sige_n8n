@@ -168,16 +168,21 @@ Quy trình đăng ký tại SIGE được tối giản hóa để hỗ trợ sin
 
 ---
 
-# 9. Hồ sơ cần chuẩn bị
+# 9. Danh mục hồ sơ cần chuẩn bị (Đài Loan)
 
-Sinh viên cần chuẩn bị đầy đủ các giấy tờ sau để làm thủ tục du học (Lưu ý: danh mục có thể thay đổi/bổ sung).
+Sinh viên cần chuẩn bị đầy đủ các giấy tờ sau để làm thủ tục du học (Lưu ý: danh mục có thể thay đổi hoặc bổ sung).
 
-- **Bằng và Học bạ:** Bảng điểm và Bằng tốt nghiệp THPT/Đại học (nộp bản gốc).
-- **Giấy tờ tùy thân:** Căn cước công dân (photo), Hộ chiếu (gốc còn hạn), Giấy khai sinh bản sao mẫu mới.
-- **Ảnh:** 05 ảnh thẻ theo quy chuẩn của Văn phòng Đài Bắc.
-- **Ngoại ngữ:** Chứng chỉ IELTS hoặc TOCFL (tùy hệ học).
-- **Tài chính:** Sổ tiết kiệm từ 120 đến 200 triệu VNĐ.
-- **Y tế:** Giấy khám sức khỏe và phiếu tiêm chủng tại bệnh viện do Viện chỉ định.
-- **Pháp lý:** Phiếu lý lịch tư pháp số 2.
+| STT | DANH MỤC | SỐ LƯỢNG | GHI CHÚ |
+|---|---|---|---|
+| 1 | Bằng TN THPT/ TN ĐH | 1 | Nộp gốc |
+| 2 | Học bạ THPT/ bảng điểm ĐH<br>Bảng điểm C3 + xác nhận (nếu mất học bạ gốc) | 1 | Nộp gốc, đầy đủ dấu giáp lai giữa các trang, không thiếu |
+| 3 | Ảnh thẻ | 5 | Theo quy định của văn phòng Đài Bắc |
+| 4 | Căn cước công dân photo | 1 | Bản photo |
+| 5 | Hộ chiếu | 1 | Gốc |
+| 6 | Giấy khai sinh bản sao mẫu mới nhất | 1 | Bản sao mẫu mới không phải bản photo công chứng |
+| 7 | Chứng chỉ IELTS | 1 | Nộp gốc. Đối với các chương trình học bằng tiếng Anh tại Đài Loan |
+| 8 | Chứng chỉ TOCFL | 1 | Nộp gốc, đối với các chương trình tiếng Trung tại Đài Loan |
+| 9 | Sổ tiết kiệm | 1 | Nộp gốc khi có thông báo làm hồ sơ xin visa, số tiền phụ thuộc vào hệ du học. Thường giao động từ 120 tới 200 triệu |
+| 10 | Giấy khám sức khỏe và phiếu tiêm | 1 | Nộp gốc theo Viện chỉ định khi có thông báo |
 
 **Semantic Keywords:** du học Đài Loan, học bổng, điều kiện tuyển sinh, SIGE, chương trình 1+4, bán dẫn, thực tập có lương.

@@ -144,16 +144,20 @@ Chi phí đi qua SIGE là Trọn gói & Minh bạch 100%. Nếu học bạ đẹ
     },
 
     "ho_so_chuan_bi": {
-        "text": """📂 DANH MỤC HỒ SƠ CẦN CHUẨN BỊ (7 BƯỚC CHUYÊN NGHIỆP)
+        "text": """📂 DANH MỤC HỒ SƠ ĐÀI LOAN CẦN CHUẨN BỊ (Lưu ý có thể thay đổi hoặc bổ sung)
 
-Để kịp kỳ bay tháng 9/2026, bạn nên chuẩn bị sớm các giấy tờ sau:
+Để kịp làm hồ sơ du học, bạn cần chuẩn bị đầy đủ các giấy tờ sau:
 
-1️⃣ Hồ sơ Học thuật: Bằng và Học bạ/Bảng điểm gốc THPT (hoặc CĐ/ĐH).
-2️⃣ Hồ sơ Cá nhân: Hộ chiếu, CCCD (photo), Giấy khai sinh bản sao mẫu mới nhất, 05 ảnh thẻ.
-3️⃣ Lý lịch tư pháp: Phiếu lý lịch tư pháp số 2.
-4️⃣ Sức khỏe: Khám sức khỏe và phiếu tiêm chủng tại bệnh viện chỉ định.
-5️⃣ Tài chính: Sổ tiết kiệm từ 120 - 200 triệu VNĐ.
-6️⃣ Chứng chỉ ngoại ngữ: Bản gốc chứng chỉ TOCFL hoặc IELTS (tùy hệ du học).
+1️⃣ Bằng TN THPT/ TN ĐH (1 bản gốc)
+2️⃣ Học bạ THPT/ Bảng điểm ĐH (1 bản gốc, đầy đủ dấu giáp lai. Nếu mất học bạ gốc cần Bảng điểm C3 + xác nhận)
+3️⃣ Ảnh thẻ (05 ảnh theo quy định của văn phòng Đài Bắc)
+4️⃣ Căn cước công dân photo (01 bản)
+5️⃣ Hộ chiếu (1 bản gốc)
+6️⃣ Giấy khai sinh bản sao mẫu mới nhất (01 bản sao mẫu mới, không phải bản photo công chứng)
+7️⃣ Chứng chỉ IELTS (1 bản gốc, đối với chương trình học bằng tiếng Anh)
+8️⃣ Chứng chỉ TOCFL (1 bản gốc, đối với chương trình tiếng Trung)
+9️⃣ Sổ tiết kiệm (1 bản gốc khi có thông báo làm visa, thường từ 120-200 triệu tùy hệ du học)
+🔟 Giấy khám sức khỏe và phiếu tiêm (1 bản gốc theo Viện chỉ định khi có thông báo)
 
 👉 Viện SIGE sẽ hỗ trợ bạn scan, dịch thuật, công chứng và nộp hồ sơ xin giấy phép từ các cơ quan ban ngành tại Đài Loan."""
     },
